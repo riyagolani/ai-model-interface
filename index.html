@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab Models - Pace University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Lab Models</h1>
+        <img src="images/pacelogo.png" alt="Pace University Logo" style="height: 80px;"/> 
+    </header>
+    
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li id="generate-patterns" class="active" onclick="showSection('generate')">Generate Patterns</li>
+                <li id="evaluate-patterns" onclick="showSection('evaluate')">Evaluate Patterns</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="generate-section">
+                <h2>Generate Wax Patterns</h2>
+                <div class="generate-area">
+                    <select id="model-select">
+                        <option value="model1">Model 1</option>
+                        <option value="model2">Model 2</option>
+                    </select>
+                    <input type="text" id="prompt-input" placeholder="Enter your prompt...">
+                    <button id="generate-btn">Generate</button>
+                </div>
+                <div id="output-display"></div>
+            </section>
+
+            <section id="evaluate-section" style="display: none;">
+                <h1>Evaluate Patterns</h1>
+                <div id="evaluation-display" class="evaluation-cards"></div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AI Lab - Pace University. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

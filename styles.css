@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+header {
+    background-color: #ffffff; /* White background for header */
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Align title and logo */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    display: flex;
+    flex-grow: 1; /* Allow the container to grow and fill the space */
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #003DA5; /* Blue color for sidebar (Pace University shade) */
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #002D88; /* Darker blue for hover */
+    border-radius: 14px; /* Rounded corners */
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0; /* Remove default margin for a tighter layout */
+    padding: 10px 0; /* Add some padding for spacing */
+    text-align: left;
+}
+
+#output-display {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.generate-area {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 20px; /* Space above the generate area */
+}
+
+.generate-area select,
+.generate-area input,
+.generate-area button {
+    margin-right: 2px; 
+    border: 1px solid #ccc; /* Border for the input field */
+    border-radius: 4px; /* Rounded corners */
+    height: 40px; /* Set height for consistency */
+}
+
+.generate-area input {
+    flex-grow: 1; /* Allow input to take remaining space */
+}
+
+.generate-area select {
+    background-color: #003DA5; /* Blue background for dropdown */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.generate-area button {
+    background-color: #003DA5; /* Blue background for button */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.generate-area button:hover {
+    background-color: #002D88; /* Darker blue on hover */
+}
+
+.evaluation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Arrange elements in a column */
+    justify-content: flex-end; /* Align content at the bottom */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 350px; /* Set a fixed height for uniformity */
+}
+
+.card img {
+    justify-content: center;
+    width: 100%; /* Make image take full width */
+    max-height: 60%; /* Constrain image height to 60% of card */
+    object-fit: cover; /* Ensure image covers area while maintaining aspect ratio */
+    margin-bottom: 10px; /* Space between image and feedback area */
+    flex-shrink: 0; /* Prevent image from shrinking */
+
+}
+
+.card .feedback-area {
+    display: flex;
+    flex-direction: column; /* Stack label, rating, and textarea vertically */
+    justify-content: flex-start; /* Align items at the top */
+    margin-top: auto; /* Push feedback area to the bottom */
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center; /* Center the stars horizontally */
+    align-items: center;
+    margin-bottom: 10px; /* Space between rating and textarea */
+}
+
+.star {
+    font-size: 24px; /* Size of stars */
+    color: #ccc; /* Default color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.2s; /* Smooth color transition */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #FFD700; /* Gold color for hover */
+}
+
+.rating-value {
+    display: none; /* Hidden input to store the rating value */
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 5px; /* Add padding for comfort */
+    border: 1px solid #ccc; /* Add border for consistency */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.submit-feedback {
+    margin-top: 10px; /* Space above submit button */
+    background-color: #003DA5; /* Blue background for submit button */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px; /* Add padding for comfort */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.submit-feedback:hover {
+    background-color: #002D88; /* Darker blue on hover */
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #003DA5; /* Blue footer */
+    color: white;
+    position: relative; /* Position relative to contain absolute elements */
+    margin-top: auto; /* Push footer to bottom */
+}
